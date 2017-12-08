@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import ContentWrapper from './ContentWrapper';
+import Requests from './Requests';
 import Sidebar from './Sidebar';
 import './ContentWrapper.css';
 import './Sidebar.css';
@@ -23,7 +23,7 @@ class App extends Component {
     return (
       <div className="App">
         <Sidebar currentSource={this.state.currentSource} handleClick={this.handleClick} />
-        <ContentWrapper currentSource={this.state.currentSource} posts={this.state.posts} />
+        <Requests currentSource={this.state.currentSource} />
       </div>
     );
   }

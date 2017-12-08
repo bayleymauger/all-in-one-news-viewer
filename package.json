@@ -14,5 +14,17 @@
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
-  }
+  },
+  "description": "This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).",
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bayleymauger/all-in-one-news-viewer.git"
+  },
+  "author": "Bayley Mauger",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bayleymauger/all-in-one-news-viewer/issues"
+  },
+  "homepage": "https://github.com/bayleymauger/all-in-one-news-viewer#readme"
 }
