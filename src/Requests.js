@@ -8,6 +8,7 @@ class Requests extends Component {
     this.state = {
       hackerNews: [],
       reddit: [],
+      techCrunch: [],
     }
   }
 
@@ -37,13 +38,23 @@ class Requests extends Component {
         return val;
       });
     }).then(() => this.setState({reddit: reddit}));
+
+    const techCrunchStories = 'https://newsapi.org/v2/top-headlines?sources=engadget&apiKey=94d4df4aa6f64c6aaf367aa821ccde0c';
+    const techCrunch = [];
+    await axios.get(techCrunchStories).then(res => {
+      console.log(res.data.articles);
+      res.data.articles.map(val => {
+        techCrunch.push(val);
+        return val;
+      });
+    }).then(() => this.setState({techCrunch: techCrunch}));
   }
 
   render() {
-    const {hackerNews, reddit} = this.state;
+    const {hackerNews, reddit, techCrunch} = this.state;
     return (
       <div>
-        <ContentWrapper hackerNews={hackerNews} reddit={reddit} currentSource={this.props.currentSource} />
+        <ContentWrapper hackerNews={hackerNews} reddit={reddit} techCrunch={techCrunch} currentSource={this.props.currentSource} />
       </div>
     )
   }

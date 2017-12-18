@@ -3,7 +3,7 @@ import Post from './Post';
 
 const ContentWrapper = (props) => {
   let views = <div className="loading">Loading...</div>
-  const {hackerNews, reddit} = props;
+  const {hackerNews, reddit, techCrunch} = props;
   const source = props.currentSource;
   if(source === 'Hacker News') {
     if(hackerNews && hackerNews.length > 0) {
@@ -15,7 +15,14 @@ const ContentWrapper = (props) => {
     if(reddit && reddit.length > 0) {
       views = reddit.map((val, i) => {
         var url = `https://www.reddit.com/${val.permalink}`
+        console.log(val.num_comments);  
         return <Post key={i} currentSource={source} title={val.title} author={val.author} points={val.score} comments={val.num_comments} url={url} />
+      });
+    }
+  } else if(source === 'Tech Crunch') {
+    if(techCrunch && techCrunch.length > 0) {
+      views = techCrunch.map((val, i) => {
+        return <Post key={i} currentSource={source} title={val.title} author={val.author} url={val.url} />
       });
     }
   }

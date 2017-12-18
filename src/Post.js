@@ -1,17 +1,26 @@
 import React from 'react';
 
 const Post = (props) => {
-  return (
-    <a href={props.url} target="_blank">
-      <div className="post">
-        <h6>{props.title}</h6>
-        <span>{props.currentSource}</span>
-        <span>{props.points} pts</span>
-        <span>by {props.author}</span>
-        <span>{props.comments} comments</span>
-      </div>
-    </a>
-  );
+
+  var comments;
+  if (props.comments) {
+    comments = <span>{props.comments} comments</span>
+  }
+
+  var points;
+  if (props.points) {
+    points = <span>{props.points} pts</span>
+  }
+
+  return (<a href={props.url} target="_blank">
+    <div className="post">
+      <h6>{props.title}</h6>
+      <span>{props.currentSource}</span>
+      {points}
+      <span>by {props.author}</span>
+      {comments}
+    </div>
+  </a>);
 }
 
 export default Post;
