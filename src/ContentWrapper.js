@@ -53,7 +53,7 @@ const ContentWrapper = (props) => {
 
   return (
     <div className="content-wrapper">
-      <h2>{source}</h2>
+      <h2 className="currentSource">{source}</h2>
       {views}
     </div>
   );

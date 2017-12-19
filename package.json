@@ -2,6 +2,7 @@
   "name": "all-in-one",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://bayleymauger.github.io/all-in-one-news-viewer",
   "dependencies": {
     "axios": "^0.17.1",
     "cheerio": "^1.0.0-rc.2",
@@ -15,10 +16,13 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "deploy" : "npm run build&&gh-pages -d build"
   },
   "description": "This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).",
-  "devDependencies": {},
+  "devDependencies": {
+    "gh-pages": "^1.1.0"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/bayleymauger/all-in-one-news-viewer.git"
@@ -27,6 +31,5 @@
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/bayleymauger/all-in-one-news-viewer/issues"
-  },
-  "homepage": "https://github.com/bayleymauger/all-in-one-news-viewer#readme"
+  }
 }

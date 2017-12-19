@@ -55,3 +55,18 @@ a {
   color: #A2A2A2;
   font-weight: 300;
 }
+
+
+@media(max-width: 768px) {
+  .post {
+    padding: 10px;
+  }
+
+  .post span {
+    font-size: 10px;
+  }
+
+  h2.currentSource {
+    padding-left: 10px;
+  }
+}
