@@ -4,7 +4,7 @@ import '../node_modules/font-awesome/css/font-awesome.min.css';
 class Sidebar extends Component {
 
   render(){
-    const news = ['Reddit', 'Tech Crunch', 'Slashdot', 'Designer News', 'Github Trending', 'Medium', 'Lifehacker'].map((val, i) => {
+    const news = ['Reddit', 'Tech Crunch', 'Slashdot', 'Designer News', 'Github Trending', 'Lifehacker'].map((val, i) => {
       return <li key={i} onClick={this.props.handleClick} id={val}>{val}</li>
     });
     return (
