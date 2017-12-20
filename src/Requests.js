@@ -2,7 +2,6 @@ import React, {Component} from 'react';
 import ContentWrapper from './ContentWrapper';
 import axios from 'axios';
 const cheerio = require('cheerio');
-const shuffle = require('shuffle-array')
 
 class Requests extends Component {
   constructor(props) {
