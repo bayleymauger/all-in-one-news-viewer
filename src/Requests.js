@@ -41,7 +41,7 @@ class Requests extends Component {
     // SLASHDOT
 
     const slashdot = [];
-    await axios.get('https://slashdot.org/').then(res => {
+    await axios.get('https://cors-anywhere.herokuapp.com/https://slashdot.org/').then(res => {
       var $ = cheerio.load(res.data);
       $('article.article').each(function(i, element) {
         var title = $(this).children('header').children('h2').children('span.story-title').children('a').text();
@@ -70,7 +70,7 @@ class Requests extends Component {
     // TECHCRUNCH
 
     const techCrunch = [];
-    await axios.get('https://techcrunch.com/').then(res => {
+    await axios.get('https://cors-anywhere.herokuapp.com/https://techcrunch.com/').then(res => {
       var $ = cheerio.load(res.data);
       $('div.block-content').each(function(i, element) {
         var title = $(this).children('h2.post-title').children('a').text();
@@ -102,7 +102,7 @@ class Requests extends Component {
     // LIFEHACKER
 
     const lifehacker = [];
-    await axios.get('https://www.lifehacker.com.au/it-pro/').then(res => {
+    await axios.get('https://cors-anywhere.herokuapp.com/https://www.lifehacker.com.au/it-pro/').then(res => {
       var $ = cheerio.load(res.data);
       var element = 'div.posts__post-item-header';
       $(element).each(function(i, element) {
